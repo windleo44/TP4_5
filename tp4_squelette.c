@@ -114,6 +114,6 @@ int main(int argc,char **argv) {
   int position = 1;
   root=build_tree(argv,&position);
   print_infix(root);
-  printf("\nLe résultat est %i \n",compute_tree(root));
+  printf("=%i \n",compute_tree(root));
   return 0;
 }
