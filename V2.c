@@ -50,11 +50,12 @@ node_t *build_tree(char **argv, int *position){
     break;
 
     default :
-	if (strlen(*(*(argv+*position)))!=1){
-		p->value=0 - (atoi(*(argv+*position+1)));
+	if (strcmp((**(argv+*position)),'-')==0){
+            printf("coucou");
+	    p->value= 0 - (atoi(*(argv+*position)+1));
 	}
 	else {
-		p->value = atoi(*(argv+*position));
+	    p->value = atoi(*(argv+*position));
 	}
     p->left = NULL;
     p->right = NULL;
